@@ -1,0 +1,462 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap');
+
+// Reset
+* {
+    padding: 0;
+    margin: 0;
+}
+
+// Colors
+//### Primary
+
+$softBlue: hsl(231, 69%, 60%);
+$softRed: hsl(0, 94%, 66%);
+
+//### Neutral
+
+$grayishBlue: hsl(229, 8%, 60%);
+$veryDarkBlue: hsl(229, 31%, 21%);
+
+//Layout
+body {
+    font: 18px 'Rubik', sans-serif;
+    color: $grayishBlue;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: $veryDarkBlue;
+}
+
+.container {
+    max-width: 1280px;
+}
+
+#navbarContent {
+    text-transform: uppercase;
+    font-size: .9rem;
+    font-weight: 500;
+}
+
+.bg-blue-left {
+    background-color: #5368df;
+    height: 250px;
+    width: 35%;
+    position: absolute;
+    z-index: -1;
+    border-radius: 250px 0 0 250px;
+    transform: translateY(100%);
+    right: 0;
+}
+
+.bg-blue-right {
+    background-color: $softBlue;
+    height: 250px;
+    width: 35%;
+    position: absolute;
+    z-index: -1;
+    border-radius: 0 250px 250px 0;
+    left: 0;
+    transform: translateY(100%);
+}
+
+.img-hero {
+    padding: 75px 0;
+}
+
+.nav-features {
+    border-bottom: 1px solid $grayishBlue;
+    margin: 0 auto;
+    width: 60%;
+}
+
+.btn-features {
+    background-color: transparent;
+    border: none;
+    border-bottom: 3px solid transparent;
+
+    &:hover {
+        color: $softRed;
+    }
+
+    &:focus {
+        border-bottom: 3px solid $softRed;
+    }
+}
+
+.chrome,
+.firefox,
+.opera {
+    border-radius: 15px;
+    padding: 30px 0;
+    max-width: 280px;
+    margin: 25px auto 0;
+    box-shadow: #08429824 0px 5px 12px;
+
+    & img {
+        padding-bottom: 25px;
+    }
+
+    & .dots {
+        width: 100%;
+    }
+
+    & p:nth-child(2) {
+        color: $veryDarkBlue;
+        font-weight: 600;
+        margin-bottom: .8rem;
+    }
+
+    & p:nth-child(3) {
+        font-size: 1rem;
+        margin-bottom: 2.5rem;
+    }
+}
+
+.firefox {
+    margin-top: 80px;
+}
+
+.opera {
+    margin-top: 120px;
+}
+
+button.btn-custom {
+    background-color: $softBlue;
+    border: 2px solid $softBlue;
+    color: white;
+    font-size: .8rem;
+
+    &:hover {
+        background-color: white;
+        color: $softBlue;
+    }
+}
+
+button.btn-light-custom {
+    border: 2px solid rgb(248, 249, 250);
+    color: gray;
+    font-size: .8rem;
+    margin-left: 10px;
+    box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
+
+    &:hover {
+        border: 2px solid gray;
+    }
+}
+
+#questions a {
+    color: $veryDarkBlue;
+    text-decoration: none;
+    font-weight: 500;
+
+    &:hover {
+        color: $softRed;
+    }
+}
+
+.arrow-custom {
+    transition: all 0.2s;
+}
+
+svg.arrow-active {
+    transform: rotate(180deg);
+
+    & path {
+        stroke: $softRed;
+    }
+}
+
+
+
+#contact-us {
+    background-color: $softBlue;
+
+    & h2,
+    h5 {
+        color: white;
+    }
+}
+
+.contact-input {
+    padding: 13px 10px;
+    border-radius: 5px;
+    font-size: 1rem;
+    border: none;
+    width: 100%;
+
+    &::placeholder {
+        opacity: .5;
+    }
+}
+
+.contact-button {
+    background-color: $softRed;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid $softRed;
+    transition: all .3s;
+    outline: 0;
+    width: 100%;
+
+    &:hover {
+        background-color: white;
+        color: $softRed;
+        border: 2px solid $softRed;
+        transition: all .3s;
+    }
+}
+
+.btn-check:focus+.btn,
+.btn:focus {
+    box-shadow: none;
+}
+
+.navbar-light .navbar-toggler {
+    border-color: transparent;
+    z-index: 1;
+    padding: 0;
+
+    &:focus {
+        box-shadow: none;
+    }
+}
+
+.rotate {
+    transform: rotate(180deg);
+}
+
+.icon-mobile {
+    width: 25px;
+    margin: 250px 10px 0;
+}
+
+.error {
+    background-color: $softRed;
+    border-radius: 5px;
+    padding: 2px;
+
+    & input {
+        color: $softRed;
+    }
+
+    & .icon-error {
+        background-image: url(../img/icon-error.svg);
+        background-position: 97% 50%;
+        background-repeat: no-repeat;
+    }
+
+    & .err-span {
+        font-size: .8rem;
+        color: #FFF;
+        display: flex;
+        padding: 4px 10px;
+        text-align: left;
+    }
+}
+
+svg.icon-footer:hover path {
+    fill: $softRed;
+    cursor: pointer;
+}
+
+footer {
+    background-color: $veryDarkBlue;
+    text-transform: uppercase;
+    font-size: .9rem;
+    text-align: center;
+
+    & a {
+        color: $grayishBlue;
+        text-decoration: none;
+
+        &:hover {
+            color: $softRed;
+        }
+    }
+}
+
+@media (max-width: 1440px) {
+    .w-75 {
+        width: 100% !important;
+    }
+}
+
+@media (max-width: 1024px) {
+    .bg-blue-left {
+        height: 225px;
+    }
+
+    .bg-blue-right {
+        height: 225px;
+    }
+}
+
+@media(min-width: 768px) and (max-width: 812px) {
+    .col-md-4 {
+        width: 30%;
+        margin: 0 1.5%;
+    }
+}
+
+@media (max-width: 812px) {
+    .container {
+        max-width: 100vw;
+        text-align: center;
+        padding: 0 40px;
+    }
+
+    #navbarContent {
+        padding: 30px 0 10px;
+    }
+
+    h1 {
+        font-size: calc(1rem + 1.5vw);
+    }
+
+    .row {
+        --bs-gutter-x: 0;
+        --bs-gutter-y: 0;
+    }
+
+    .bg-blue-left {
+        background-color: #5368df;
+        height: 165px;
+        width: 40%;
+        position: absolute;
+        z-index: -1;
+        border-radius: 250px 0 0 250px;
+        right: 0px;
+    }
+
+    .bg-blue-right {
+        background-color: #5368df;
+        height: 165px;
+        width: 40%;
+        position: absolute;
+        z-index: -1;
+        border-radius: 0 250px 250px 0;
+        left: 0;
+    }
+
+    #questions.container {
+        text-align: left !important;
+    }
+
+    .w-50 {
+        width: 100% !important;
+    }
+
+    .img-hero {
+        padding: 50px 0 65px;
+    }
+
+    .nav-features {
+        width: 100%;
+    }
+
+    .nav-features {
+        border-bottom: none;
+
+        & button {
+            width: 100%;
+            border-bottom: 3px solid rgba(201, 201, 201, 0.25);
+
+            &.btn-features:nth-child(1) {
+                border-top: 3px solid rgba(201, 201, 201, 0.25);
+            }
+        }
+    }
+
+    .contact-button {
+        text-decoration: none;
+        padding: 10px 0;
+    }
+
+    nav .collapse.show {
+        position: absolute;
+        background-color: hsl(229, 31%, 21%);
+        opacity: .9;
+        width: 100%;
+        height: 100vh;
+        left: 0;
+        top: 0;
+        transition: all 0.5s ease;
+
+        & ul {
+            position: relative;
+            top: 50px;
+        }
+
+        & ul.navbar-nav::before {
+            content: url('../img/logo-bookmark-mobile.svg');
+            position: relative;
+            top: -58px;
+            left: -74px;
+        }
+
+        & li {
+            border-top: 1px solid #9194a16b;
+            padding: 15px;
+            width: 85%;
+            margin: auto;
+
+            & a.nav-link {
+                color: white;
+                font-size: 1.1rem;
+                font-weight: 400;
+            }
+        }
+
+        & li:nth-child(4) {
+            width: 85%;
+
+            & a {
+                border-radius: 5px;
+                border: 1px solid white;
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+
+    .firefox,
+    .opera {
+        margin-top: 60px;
+    }
+
+    .bg-blue-left,
+    .bg-blue-right {
+        transform: translateY(75%);
+        width: 60%;
+    }
+}
+
+@media (min-width: 992px) {
+    .btn-login {
+        background-color: $softRed;
+        color: #FFF !important;
+        width: 75%;
+        text-align: center;
+        border-radius: 5px;
+        border: 2px solid $softRed;
+
+        &:hover {
+            color: $softRed !important;
+            background-color: #FFF;
+            border: 2px solid $softRed;
+        }
+    }
+
+    .navbar-light .navbar-nav .nav-link:hover {
+        color: $softRed;
+    }
+}
