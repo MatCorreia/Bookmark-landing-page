@@ -21,7 +21,7 @@ function openCity(features) {
     hamburgerClose.addEventListener('click', () => {
         hamburger.style.display = "block";
         hamburgerClose.style.display = "none";
-        body.style.overflow = "scroll"
+        body.style.overflow = "inherit"
     });
 })()
 
