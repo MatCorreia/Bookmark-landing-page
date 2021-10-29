@@ -193,6 +193,9 @@ svg.arrow-active {
     padding: 4px 10px;
     text-align: left; }
 
+.logo-mobile {
+  display: none; }
+
 svg.icon-footer:hover path {
   fill: #fa5757;
   cursor: pointer; }
@@ -223,11 +226,15 @@ footer {
     width: 30%;
     margin: 0 1.5%; } }
 
-@media (max-width: 812px) {
+@media (max-width: 991px) {
   .container {
     max-width: 100vw;
     text-align: center;
     padding: 0 40px; }
+  .logo-mobile {
+    display: inherit;
+    position: relative;
+    transform: translate(27%, -233%); }
   #navbarContent {
     padding: 30px 0 10px; }
   h1 {
@@ -276,16 +283,10 @@ footer {
     width: 100%;
     height: 100vh;
     left: 0;
-    top: 0;
-    transition: all 0.5s ease; }
+    top: 0; }
     nav .collapse.show ul {
       position: relative;
       top: 50px; }
-    nav .collapse.show ul.navbar-nav::before {
-      content: url("../img/logo-bookmark-mobile.svg");
-      position: relative;
-      top: -58px;
-      left: -74px; }
     nav .collapse.show li {
       border-top: 1px solid #9194a16b;
       padding: 15px;
